@@ -6,11 +6,11 @@ namespace AQuietPlace {
    /// <summary>
    /// This is the main type for your game.
    /// </summary>
-   public class Game1 : Game {
+   public class QuietPlace : Game {
       GraphicsDeviceManager graphics;
       SpriteBatch spriteBatch;
 
-      public Game1() {
+      public QuietPlace() {
          graphics = new GraphicsDeviceManager(this);
          Content.RootDirectory = "Content";
       }
@@ -34,8 +34,6 @@ namespace AQuietPlace {
       protected override void LoadContent() {
          // Create a new SpriteBatch, which can be used to draw textures.
          spriteBatch = new SpriteBatch(GraphicsDevice);
-
-         // TODO: use this.Content to load your game content here
       }
 
       /// <summary>
@@ -52,10 +50,7 @@ namespace AQuietPlace {
       /// </summary>
       /// <param name="gameTime">Provides a snapshot of timing values.</param>
       protected override void Update(GameTime gameTime) {
-         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
 
-         // TODO: Add your update logic here
 
          base.Update(gameTime);
       }
